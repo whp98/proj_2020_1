@@ -18,11 +18,9 @@ def inflate(data):
 
 def prep():
     # recv = redis.StrictRedis(host='127.0.0.1', port='6379', db=0)
-    recv = redis.StrictRedis(host='149.129.87.222', port='6379', db=0)
+    recv = redis.StrictRedis(host='127.0.0.1', port='6379', db=0)
     ps = recv.pubsub()
     ps.subscribe('OKEx')
-    #外网测试
-    #myclient = pymongo.MongoClient('mongodb://redis.intellij.xyz:27017/')
     # 内网运行
     myclient = pymongo.MongoClient('mongodb://127.0.0.1:27017/')
     dblist = myclient.list_database_names()

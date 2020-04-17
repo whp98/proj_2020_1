@@ -18,7 +18,7 @@ def inflate(data):
 
 def prep():
     # recv = redis.StrictRedis(host='127.0.0.1', port='6379', db=0)
-    recv = redis.StrictRedis(host='149.129.87.222', port='6379', db=0)
+    recv = redis.StrictRedis(host='127.0.0.1', port='6379', db=0)
     ps = recv.pubsub()
     ps.subscribe('OKEx')
     #外网测试
